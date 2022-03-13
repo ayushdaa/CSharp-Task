@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+
+namespace Task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Program1();
+            //Program2();
+            //Program3();
+            //Program4();
+            //Program5();
+
+
+            Console.ReadKey();
+        }
+
+        private static void Program5()
+        {
+            Dictionary<string, string> d = new Dictionary<string, string>();
+            d.Add("RANK 1", "Javascript");
+            d.Add("RANK 2", "SQL");
+            d.Add("RANK 3", "Python");
+            d.Add("RANK 4", "CSharp");
+            d.Add("RANK 5", "Java");
+
+            foreach (KeyValuePair<string, string> i in d)
+            {
+                Console.WriteLine("key {0}--> value{1}", i.Key, i.Value);
+            }
+        }
+
+        private static void Program4()
+        {
+            Console.WriteLine("Enter the Value : ");
+            int Value = Convert.ToInt32(Console.ReadLine());
+            switch (Value)
+            {
+                case 0:
+                    Console.WriteLine($"{Days.Sun}");
+                    break;
+                case 1:
+                    Console.WriteLine($"{Days.Mon}");
+                    break;
+                case 2:
+                    Console.WriteLine($"{Days.Tue}");
+                    break;
+                case 3:
+                    Console.WriteLine($"{Days.Wed}");
+                    break;
+                case 4:
+                    Console.WriteLine($"{Days.Thur}");
+                    break;
+                case 5:
+                    Console.WriteLine($"{Days.Fri}");
+                    break;
+                case 6:
+                    Console.WriteLine($"{Days.Sat}");
+                    break;
+            }
+        }
+
+        private static void Program3()
+        {
+            Dictionary<int, string> d = new Dictionary<int, string>();
+            d.Add(1, "Ayush");
+            d.Add(2, "Akram");
+            d.Add(3, "Ashish");
+            d.Add(4, "Harendra");
+            d.Add(5, "Akhil");
+
+            Console.WriteLine("Enter a number : ");
+            int user = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+
+            foreach (KeyValuePair<int, string> i in d)
+            {
+                if (i.Key == user)
+                    Console.WriteLine("key {0} value{1}", i.Key, i.Value);
+                count++;
+            }
+            if (user > count)
+                Console.WriteLine("Key does not exist");
+        }
+
+        private static void Program2()
+        {
+            Console.WriteLine("Enter Number.......");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int count = 1;
+            while (count <= 20)
+            {
+                Console.WriteLine($"{num} *  {count} :  {num * count}");
+                count++;
+            }
+        }
+
+        private static void Program1()
+        {
+            Console.WriteLine(Math.Round(12.5));
+            Console.WriteLine(Math.Round(10.5));
+        }
+    }
+    enum Days{
+        Sun,
+        Mon,
+        Tue,
+        Wed,
+        Thur,
+        Fri,
+        Sat
+    }
+}
